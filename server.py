@@ -41,6 +41,7 @@ def preprocess_image(img):
     # extract features
     hog_features = hog(img,orientations=8, pixels_per_cell=(16, 16), cells_per_block=(2, 2))
     lbp = local_binary_pattern(img, P, R, method='uniform')
+    lbp = np.array(lbp, dtype=np.float32)
     (hist, _) = np.histogram(lbp.ravel(), bins=np.arange(0, n_bins))
     feature_vector = np.append(hog_features, hist)
 
