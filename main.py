@@ -46,7 +46,7 @@ def preprocess_image(img):
 
     return feature_vector
 
-@app.post("/")
+@app.post("/classify-card")
 def index(image: UploadFile = File(...)):
     img = Image.open(image.file)
     feature_vector = preprocess_image(img)
