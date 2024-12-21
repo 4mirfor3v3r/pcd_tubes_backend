@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+opencv-python
+python-multipart
+Pillow
+joblib
+scikit-image
+xgboost
